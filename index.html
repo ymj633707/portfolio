@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YOONMIJI_portfolio</title>
+
+    <!-- font -->
+    <link rel="stylesheet" href="./css/font/pretendard_stylesheet.css">
+    <link rel="stylesheet" href="./css/font/tenada_stylesheet.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/bg_animation.css">
+
+    <!--GSAP-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.0/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.0/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.0/ScrollToPlugin.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1/bundled/lenis.min.js"></script>
+
+    <!--jQuery-->
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-scrollTo/2.1.3/jquery.scrollTo.min.js"></script>
+
+    <!--JS-->
+    <script src="./js/main.js" defer></script>
+    
+
+    <!--AOS-->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <!--lenis-->
+    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1/bundled/lenis.min.js"></script>
+
+    <!--icon-->
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-bold-straight/css/uicons-bold-straight.css'>
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-brands/css/uicons-brands.css'>
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-solid-rounded/css/uicons-solid-rounded.css'>
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-solid-straight/css/uicons-solid-straight.css'>
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css'>
+
+</head>
+<body>
+    <section class="intro_page page">
+        <div id="nc-main" class="nc-main nc-main01 bg-cover bg-cc">
+            <div class="full-wh">
+              <!-- STAR ANIMATION -->
+              <div class="bg-animation">
+                <div id='stars'></div>
+                <div id='stars2'></div>
+                <div id='stars3'></div>
+                <div id='stars4'></div>
+              </div><!-- / STAR ANIMATION -->
+            </div>
+        </div> <!--nc-main_bg_animation-->
+
+        <div class="lnb">
+            <ul class="lnb_list">
+                <li class="on"><a href="#section01">Profile</a></li>
+                <li><a href="#section02">Skill</a></li>
+                <li><a href="#section03">Project</a></li>
+                <li><a href="#section04">Contact</a></li>
+            </ul>
+        </div>
+
+        <div class="intro_content">
+            <div class="txt">
+                <div class="text_content first">FRONTEND</div>
+                <div class="text_content second">YOONMIJI PORTFOLIO</div>
+            </div>
+            <div class="moon">
+                <div class="moon_body"></div>
+            </div>
+            <div class="txt">
+                <div class="text_content_border first">FRONTEND</div>
+                <div class="text_content_border second">YOONMIJI PORTFOLIO</div>
+            </div>
+        </div>
+    </section> <!--intro_page-->
+
+    <section class="profile_page page" id="section01">
+        <div id="nc-main" class="nc-main nc-main02 bg-cover bg-cc">
+            <div class="full-wh">
+              <!-- STAR ANIMATION -->
+              <div class="bg-animation">
+                <div id='stars'></div>
+                <div id='stars2'></div>
+                <div id='stars3'></div>
+                <div id='stars4'></div>
+              </div><!-- / STAR ANIMATION -->
+            </div>
+        </div> <!--nc-main_bg_animation-->
+        <div class="profile_tit">
+            <strong>P<span>ro</span>fil<span>e</span></strong>
+        </div>
+        <div class="profile_box" data-aos="flip-left" data-aos-once="false" data-aos-easing="ease-out-quad">
+            <div class="content01">
+                <div class="profile_img">
+                    <div class="img_box"></div>
+                </div>
+                <div class="profile_txt">
+                    <div class="txt01 txt">
+                        <p>이름</p>
+                        <p>윤미지</p>
+                    </div>
+                    <div class="txt02 txt">
+                        <p>나이</p>
+                        <p>90.07.22</p>
+                    </div>
+                    <div class="txt03 txt">
+                        <p>주소</p>
+                        <p>경상남도 양산시</p>
+                    </div>
+                    <div class="txt04 txt">
+                        <p>전화번호</p>
+                        <p>010.2714.9007</p>
+                    </div>
+                    <div class="txt05 txt">
+                        <p>이메일</p>
+                        <p>ymj0722@naver.com</p>
+                    </div>
+                </div>
+            </div>
+            <div class="content02">
+                <div class="education">
+                    <div class="txt01">교육</div>
+                    <div class="txt02">
+                        <ul>
+                            <li>효암고등학교 졸업</li>
+                            <li>경남정보대학 치위생과 졸업</li>
+                            <li>22.12.30 ~ 23.07.14<br/>[스마트웹&콘텐츠개발]프론트엔드 개발자(JavaScript, React)양성과정</li>
+                        </ul>
+                    </div>
+                </div> <!--education-->
+                <div class="society">
+                    <div class="txt01">사회</div>
+                    <div class="txt02">
+                        <ul>
+                            <li>2022.09 ~ 2020.10(2년 1개월) <br/>(주)지피지기코퍼레이션/ (주)세은에프엘코리아 관리부 대리</li>
+                            <li>2019.03 ~ 2020.02(11개월)<br/>(주)우성종합건설 관리부</li>
+                            <li>2015.10 ~ 2018.08(2년 10개월)<br/>우창티앤에스(주) 경리부</li>
+                            <li>2011.12 ~ 2014.09(2년 9개월)<br/>미소를 만드는 치과 치위생사</li>
+                        </ul>
+                    </div>
+                </div> <!--society-->
+                <div class="Resolution">
+                    <div class="txt01">'강한 바람에 휘어지지 않고 자라는 나무만이 숲을 이루고자 한다'</div>
+                    <div class="txt02">
+                        <p>라는 말이 있습니다.</p>
+                        <p>저는 개발자로서 경력과 역량을 쌓아가는 동안, 단순히 목표를 설정하고 그것을 달성하는데만 집중하는 것이 아니라 변화하는 기술과 환경에 적응하며 흐름에 따라 나아갈 각오가 되어있습니다. </p>
+                        <p>저는 옆으로 자라나는 나무처럼 주변 환경에 맞추어 성장하고 생존할 줄 아는 유연한 프론트 개발자가 되겠습니다.</p>
+                    </div>
+                </div>
+            </div> <!--content02-->
+        </div>
+    </section>
+
+    <section class="skill_page page" id="section02">
+        <div id="nc-main" class="nc-main nc-main01 bg-cover bg-cc">
+            <div class="full-wh">
+              <!-- STAR ANIMATION -->
+              <div class="bg-animation">
+                <div id='stars'></div>
+                <div id='stars2'></div>
+                <div id='stars3'></div>
+                <div id='stars4'></div>
+              </div><!-- / STAR ANIMATION -->
+            </div>
+        </div> <!--nc-main_bg_animation-->
+        <div class="skill_tit">
+            <strong>Skill</strong>
+        </div>
+        <div class="skill_area">
+            <div class="skill_content01 content" data-aos="fade-up"
+            data-aos-anchor-placement="top-bottom" data-aos-duration="1000">
+                <div class="skill_box01 box">
+                    <div class="img_box">
+                        <img src="./img/hmtl.png" alt="html_img">
+                        <p class="first_txt">HTML5</p>
+                    </div>
+                    <div class="txt">
+                        <p class="second_txt">웹표준을 지켜 레이아웃<br/> 작성가능</p>
+                    </div>
+                </div>
+                <div class="skill_box02 box">
+                    <div class="img_box">
+                        <img src="./img/css.png" alt="css_img">
+                        <p class="first_txt">CSS3</p>
+                    </div>
+                    <div class="txt">
+                        <p class="second_txt">미디어쿼리를 활용한 <br/>반응형 제작 가능<br/> 꼼꼼한 코드 작성 가능</p>
+                    </div>
+                </div>
+                <div class="skill_box03 box">
+                    <div class="img_box">
+                        <img src="./img/sass.png" alt="html_img">
+                        <p class="first_txt">SCSS</p>
+                    </div>
+                    <div class="txt">
+                        <p class="second_txt">SCSS 문법 활용가능</p>
+                    </div>
+                </div>
+                <div class="skill_box04 box">
+                    <div class="img_box">
+                        <img src="./img/JS.png" alt="html_img">
+                        <p class="first_txt">JavaScript</p>
+                    </div>
+                    <div class="txt">
+                        <p class="second_txt">DOM 조작으로 동적이고<br/> 상호작용적인 웹페이지 <br/>구현가능</p>
+                    </div>
+                </div>
+            </div>
+            <div class="skill_content02 content" data-aos="fade-up"
+            data-aos-anchor-placement="top-bottom" data-aos-duration="1000" data-aos-delay="300">
+                <div class="skill_box01 box">
+                    <div class="img_box">
+                        <img  class="jQuery" src="./img/jQuery_01.png" alt="jQuery_img">
+                        <p class="first_txt">jQuery</p>
+                    </div>
+                    <div class="txt">
+                        <p class="second_txt">이벤트 처리가능<br/>플러그인 사용가능</p>
+                    </div>
+                </div>
+                <div class="skill_box02 box">
+                    <div class="img_box">
+                        <img src="./img/react.png" alt="html_img">
+                        <p class="first_txt">React</p>
+                    </div>
+                    <div class="txt">
+                        <p class="second_txt">홈페이지 제작 경험있음</p>
+                    </div>
+                </div>
+                <div class="skill_box03 box">
+                    <div class="img_box">
+                        <img src="./img/git_icon.png" alt="html_img">
+                        <p class="first_txt">Git/GitHub</p>
+                    </div>
+                    <div class="txt">
+                        <p class="second_txt">Git을 활용한<br/>협업과 버전관리 가능</p>
+
+                    </div>
+                </div>
+                <div class="skill_box04 box">
+                    <div class="img_box">
+                        <img src="./img/xd.png " alt="html_img">
+                        <p class="first_txt">XD</p>
+                    </div>
+                    <div class="txt">
+                        <p class="second_txt">프로토타입, 시안<br/> 제작가능</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="project_page section" data-bgcolor="#1B2735" id="section03">
+        <div class="project_tit">
+            <strong>Project</strong>
+        </div>
+         <div class="content01 content"  data-aos="fade-right" data-aos-duration="1000" data-aos-delay="300">
+            <div class="project_img">
+                <img src="./img/조말론.png" alt="조말론">
+            </div>
+            <div class="txt_box">
+                <p class="txt_01">조말론</p>
+                <div class="tag">
+                    <span>HTML</span>
+                    <span>SCSS</span>
+                    <span>jQuery</span>
+                    <span>JavaScript</span>
+                </div>
+                <p class="txt_02">팀프로젝트(2주)</p>
+                <p class="txt">JS 기반으로 제작한 적응형 리뉴얼 사이트</p>
+                <p class="txt_04 txt">기존 정적인 사이트를 JS를 활용하여 동적인 기능과 사용자의 상호작용에 반응하도록 구현</p>
+                <div class="project_icon">
+                    <div class="icon_01 icon">
+                        <a href="./img/조말론 기획서.pdf" target="_blank">
+                            <div class="icon_img">
+                                <img class="basic" src="./img/기획서_icon.png" alt="기획서_icon">
+                                <img class="hover" src="./img/기획서_hover_icon.png" alt="기획서_hover_icon">
+                            </div>
+                            <p>기획서 보기</p>
+                        </a>
+                    </div>
+                    <div class="icon_02 icon">
+                        <a href="https://github.com/ymj633707/jomalone.git" target="_blank">
+                        <div class="icon_img">
+                            <img class="basic" src="./img/git_icon.png" alt="git_icon">
+                            <img class="hover" src="./img/git_hover_icon.png" alt="git_hover_icon">
+                        </div>
+                        <p>GitHub</p>
+                        </a>
+                    </div>
+                    <div class="icon_03 icon" data-modal="project-modal01">
+                        <div class="icon_img">
+                            <img class="basic" src="./img/코드_icon.png" alt="코드_icon">
+                            <img class="hover" src="./img/코드_hover_icon.png" alt="code_hover_icon">
+                        </div>
+                        <p>코드보기</p>
+                    </div>
+                    <div class="icon_04 icon">
+                        <a href="https://ymj633707.github.io/jomalone/" target="_blank">
+                            <div class="icon_img">
+                                <img class="basic" src="./img/사이트_icon.png" alt="사이트_icon">
+                                <img class="hover" src="./img/사이트_hover_icon.png" alt="site_hover_icon">
+                            </div>
+                            <p>사이트보기</p>
+                        </a>
+                    </div>
+                </div> <!--project_icon-->
+            </div>
+        </div>
+         <div class="content02 content" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="500">
+            <div class="project_img">
+                <img src="./img/한진관광.png" alt="한진관광">
+            </div>
+            <div class="txt_box">
+                <p class="txt_01">한진관광</p>
+                <div class="tag">
+                    <span>HTML</span>
+                    <span>CSS</span>
+                    <span>jQuery</span>
+                </div>
+                <p class="txt_02">개인프로젝트(2주)</p>
+                <p class="txt">미디어쿼리를 활용하여 반응형 리뉴얼 사이트 제작</p>
+                <p class="txt_04 txt">jQuery 플러그인을 이용하여 이벤트 구현</p>
+                <div class="project_icon">
+                    <div class="icon_01 icon">
+                        <a href="./img/한진관광 기획서.pdf" target="_blank">
+                            <div class="icon_img">
+                                <img class="basic" src="./img/기획서_icon.png" alt="기획서_icon">
+                                <img class="hover" src="./img/기획서_hover_icon.png" alt="기획서_hover_icon">
+                            </div>
+                            <p>기획서 보기</p>
+                        </a>
+                    </div>
+                    <div class="icon_02 icon">
+                        <a href="https://github.com/ymj633707/Hanjin-Tourism.git" target="_blank">
+                            <div class="icon_img">
+                                <img class="basic" src="./img/git_icon.png" alt="git_icon">
+                                <img class="hover" src="./img/git_hover_icon.png" alt="git_hover_icon">
+                            </div>
+                            <p>GitHub</p>
+                        </a>
+                    </div>
+                    <div class="icon_03 icon">
+                        <a href="https://ymj633707.github.io/Hanjin-Tourism/" target="_blank">
+                            <div class="icon_img">
+                                <img class="basic" src="./img/사이트_icon.png" alt="사이트_icon">
+                                <img class="hover" src="./img/사이트_hover_icon.png" alt="사이트_hover_icon">
+                            </div>
+                            <p>사이트보기</p>
+                        </a>
+                    </div>
+                </div> <!--project_icon-->
+            </div>
+        </div> 
+
+        <div class="content03 content" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="500">
+            <div class="project_img">
+                <img src="./img/패스룸.png" alt="패스룸">
+            </div>
+            <div class="txt_box">
+                <p class="txt_01">패스룸</p>
+                <div class="tag">
+                    <span>HTML</span>
+                    <span>CSS</span>
+                    <span>JavaScript</span>
+                    <span>React</span>
+                </div>
+                <p class="txt_02">개인프로젝트(3일)</p>
+                <p class="txt">React를 기반으로 사이트 제작</p>
+                <p class="txt_04 txt">리덕스 라이브러리를 이용한 장바구니 기능 구현</p>
+                <div class="project_icon">
+                    <div class="icon_02 icon">
+                        <a href="https://github.com/ymj633707/pethroom.git" target="_blank">
+                            <div class="icon_img">
+                                <img class="basic" src="./img/git_icon.png" alt="git_icon">
+                                <img class="hover" src="./img/git_hover_icon.png" alt="git_hover_icon">
+                            </div>
+                            <p>GitHub</p>
+                        </a>
+                    </div>
+                    <div class="icon_03 icon">
+                        <a href="https://ymj633707.github.io/pethroom/" target="_blank">
+                            <div class="icon_img">
+                                <img class="basic" src="./img/사이트_icon.png" alt="사이트_icon">
+                                <img class="hover" src="./img/사이트_hover_icon.png" alt="사이트_hover_icon">
+                            </div>
+                            <p>사이트보기</p>
+                        </a>
+                    </div>
+                </div> <!--project_icon-->
+            </div>
+        </div> 
+        
+        <div class="content04">
+            <div class="project_img"></div>
+            <div class="txt_box"></div>
+        </div>
+        
+        
+    </section>
+
+    <div class="modal_area">
+        <div class="project_modal" id="project-modal01">
+            <div class="bg"></div>
+            <div class="modal_box">
+                <ul class="tab">
+                    <li class="tab_item active">
+                        <i class="fi fi-sr-ufo"></i>
+                        Tab Menu</li>
+                    <li class="tab_item">
+                        <i class="fi fi-ss-stars"></i>
+                        Swiper/Modal</li>
+                    <li class="tab_item">
+                        <i class="fi fi-ss-planet-ringed"></i>
+                        Data base</li>
+                    <li class="tab_item">
+                        <i class="fi fi-rr-solar-system"></i>
+                        정렬기능</li>
+                    <li class="tab_item">
+                        <i class="fi fi-ss-comet"></i>
+                        포토리뷰</li>
+                </ul>
+                <div class="tab_inner">
+                    <div class="content01 tab_content active">
+                        <h4>Tab Menu</h4>
+                        <div class="content_img">
+                            <img src="./img/tab_menu.jpg" alt="tab_menu">
+                            <p>사용자가 클릭하면 탭의 컬러와 border가 변경되고,<br />그 탭에 맞는 인덱스가 보이도록 구현</p>
+                            <button class="site"><a href="https://ymj633707.github.io/jomalone/" target="_blank">사이트 보기</a></button>
+                        </div>
+                        <div class="code code01"></div>
+                    </div>
+                    <div class="content02 tab_content">
+                        <h4>Swiper/Modal</h4>
+                        <div class="content_img">
+                            <img class="content02_img" src="./img/code_img02.png" alt="swiper">
+                            <p class="txt">Swiper Plugin을 사용</p>
+                            <img class="content02_img02" src="./img/code_img02_02.png" alt="">
+                            <p>사용자가 Slide 중 하나를 클릭했을 때 Slide에 <br/>해당하는 Modal창이 뜨도록 구현.<br/>반복되는 클릭이벤트에는 forEach메서드를 사용</p>
+                            <button class="site"><a href="https://ymj633707.github.io/jomalone/" target="_blank">사이트 보기</a></button>
+                        </div>
+                        <div class="code02">
+                            <div class="code02_01 bgc"></div>
+                            <div class="shadow">
+                                <div class="code02_02 bgc"></div>
+                                <div class="code02_03 bgc code_content01"></div>
+                            </div>
+                            <div class="open_btn btn">
+                                펼쳐보기
+                                <img class="arrow arrow1" src="./img/down_arrow.png" alt="down_arrow">
+                            </div>
+                            <div class="close_btn btn">
+                                접기
+                                <img class="arrow arrow2" src="./img/up-arrow.png" alt="arrow">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="content03 tab_content">
+                        <h4>Data base</h4>
+                        <div class="content_img">
+                            <img src="./img/code_img03.png" alt="code_img03">
+                            <p>동적으로 요소를 생성하여 서브페이지를 구현<br/>개발과 유지 보수의 효율성을 향상시키기 위해<br/> 서브페이지의 데이터를 객체 데이터로 구축</p>
+                            <button class="site"><a href="https://ymj633707.github.io/jomalone/" target="_blank">사이트 보기</a></button>
+                        </div>
+                        <div class="code03">
+                            <div class="shadow">
+                                <div class="code03_01 bgc"></div>
+                                <div class="code03_02 bgc code_content02"></div>
+                            </div>
+                            <div class="open_btn2 btn">
+                                펼쳐보기
+                                <img class="arrow arrow1" src="./img/down_arrow.png" alt="down_arrow">
+                            </div>
+                            <div class="close_btn2 btn">
+                                접기
+                                <img class="arrow arrow2" src="./img/up-arrow.png" alt="arrow">
+                            </div>
+                            <div class="code03_03 bgc shadow"></div>
+                        </div>
+                    </div>
+                    <div class="content04 tab_content">
+                        <h4>정렬기능</h4>
+                        <div class="content_img">
+                            <img src="./img/code_img04.jpg" alt="code_img04">
+                            <p>사용자의 편의성을 위해 sort 함수를 사용하여 이름순, 가격순, 기본순을 구현</p>
+                            <button class="site"><a href="https://ymj633707.github.io/jomalone/" target="_blank">사이트 보기</a></button>
+                        </div>
+                        <div class="code04">
+                            <div class="shadow">
+                                <div class="code04_01 bgc"></div>
+                                <div class="code04_02 bgc"></div>
+                            </div>
+                            <div class="open_btn3 btn">
+                                펼쳐보기
+                                <img class="arrow arrow1" src="./img/down_arrow.png" alt="down_arrow">
+                            </div>
+                            <div class="close_btn3 btn">
+                                접기
+                                <img class="arrow arrow2" src="./img/up-arrow.png" alt="arrow">
+                            </div>
+                        
+                        </div>
+                    </div>
+                    <div class="content05 tab_content">
+                        <h4>포토리뷰</h4>
+                        <div class="content_img">
+                            <img src="./img/code_img05.jpg" alt="code_img05">
+                            <p>동적으로 요소를 생성하여 사용자가 사진을 업로드하면 <br/>파일을 읽어와 이미지 URL을 생성하고, 리뷰작성 가능<br />작성된 리뷰에는 작성날짜가 포함되어 있으며, <br />삭제 기능도 구현</p>
+                            <button class="site"><a href="https://ymj633707.github.io/jomalone/" target="_blank">사이트 보기</a></button>
+                        </div>
+                        <div class="code05">
+                            <div class="shadow">
+                                <div class="code05_01 bgc"></div>
+                                <div class="code05_02 bgc"></div>
+                            </div>
+                            <div class="open_btn4 btn">
+                                펼쳐보기
+                                <img class="arrow arrow1" src="./img/down_arrow.png" alt="down_arrow">
+                            </div>
+                            <div class="close_btn4 btn">
+                                접기
+                                <img class="arrow arrow2" src="./img/up-arrow.png" alt="arrow">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="close_icon">
+                    <img src="./img/close_icon.png" alt="close_icon">
+                </div>
+            </div>
+            
+        </div>
+    </div>
+
+    <section class="contact_page section" data-bgcolor="#eee" id="section04">
+        
+        <div class="txt">
+            <h1>Thank you</h1>
+        </div>
+        
+        <div class="card_box">
+            <div class="img_box">
+                <div class="img">
+                    <img src="./img/mimo.png" alt="">
+                </div>
+                <div class="name">YOON MIJI</div>
+            </div>
+            <div class="txt_box">
+                <p class="card_tit">Contact Me</p>
+                <div class="email_box">
+                    <div class="email">
+                        <img src="./img/email_icon.png" alt="email_icon">
+                    </div>
+                    <p>ymj0722@naver.com</p>
+                </div>
+                <div class="tel_box">
+                    <div class="tel">
+                        <img src="./img/tel_icon.png" alt="tel_icon">
+                    </div>
+                    <p>010.2714.9007</p>
+                </div>
+                <div class="sns_box">
+                    <div class="sns">
+                        <p>GitHub</p>
+                        <div><a href="https://github.com/ymj633707" target="_blank"><i class="fi fi-brands-github sns_icon"></i></a></div>
+                    </div>
+                    <div class="sns">
+                        <p>Notion</p>
+                        <div><a href="https://steep-turkey-0b3.notion.site/4526e2b3f56d4db58cee1bb0d51df3f4?v=39a01630b2944144a3bcb6f068f8e154&pvs=4" target="_blank"><i class="fi fi-bs-n sns_icon"></i></a></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="Copyright">
+            <p>본 사이트는 상업적 목적이 아닌 개인 포트폴리오용으로 제작되었습니다.</p>
+            <p>Designed & Developed By YOON MIJI</p>
+        </div>
+    </section>
+
+    <div class="scroll_box">
+        <div class="scroll_arrow"></div>
+        <div class="scroll_arrow"></div>
+        <div class="scroll_arrow"></div>
+    </div>
+
+    <div class="top_btn"><img src="./img/top_icon.png" alt="top_icon"></div>
+
+    <script>
+        AOS.init();
+    </script>
+</body>
+</html>

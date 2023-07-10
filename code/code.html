@@ -1,0 +1,270 @@
+<div id="code01">
+    <p><span class="p">const </span>tabItem <span class="p">=</span> <span class="b">document.querySelectorAll</span>(<span class="n">'.tab_item'</span>)</p>
+    <p><span class="p">const</span> tabInner <span class="p">=</span> <span class="b">document.querySelectorAll</span>(<span class="n">'.tab_inner'</span>)</p>
+    <br />
+    <p>tabItem.forEach((tab, idx) <span class="p">=></span> {</p>
+    <p>&nbsp;&nbsp;tab.<span class="b">addEventListener</span>(<span class="n">'click'</span>, <span class="p">function</span>(){</p>
+    <p>&nbsp;&nbsp;&nbsp;&nbsp;tabInner.forEach((inner)<span class="p"> =></span> {</p>
+    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;inner.classList.remove(<span class="n">'active'</span>)</p>
+    <p>&nbsp;&nbsp;&nbsp;&nbsp;})</p>
+    <p>&nbsp;&nbsp;&nbsp;&nbsp;tabItem.forEach((item) <span class="p">=></span> {</p>
+    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;item.classList.remove(<span class="n">'active'</span>)</p>
+    <p>&nbsp;&nbsp;&nbsp;&nbsp;})</p>
+    <p>&nbsp;&nbsp;&nbsp;&nbsp;tabItem[idx].classList.add(<span class="n">'active'</span>)</p>
+    <p>&nbsp;&nbsp;&nbsp;&nbsp;tabInner[idx].classList.add(<span class="n">'active'</span>)</p>
+    <P>&nbsp;&nbsp;})</P>
+    <P>})</P>
+</div>
+
+<div id="code02">
+    <p><span class="p">const</span> swiper3 <span class="p">=</span> <span class="p">new</span> Swiper(<span class="g">".snsSwiper"</span>, {</p>
+    <p>&nbsp;&nbsp;loop: <span class="p">true</span>,</p>
+    <p>&nbsp;&nbsp;spaceBetween: <span class="b">20</span>,</p>
+    <p>&nbsp;&nbsp;slidesPerView: <span class="b">4</span>,</p>
+    <p>&nbsp;&nbsp;centeredSlides : <span class="p">true</span>,</p>
+    <p>&nbsp;&nbsp;navigation: {</p>
+    <p>&nbsp;&nbsp;&nbsp;&nbsp;nextEl: <span class="g">".swiper-button-next"</span>,</p>
+    <p>&nbsp;&nbsp;&nbsp;&nbsp;prevEl: <span class="g">".swiper-button-prev"</span>,</p>
+    <p>&nbsp;&nbsp;},</p>
+    <p>});</p>
+</div>
+
+<div id="code02_02">
+    <p><span class="p">const</span> listItems <span class="p">=</span> <span class="b">document</span><span class="b">querySelectorAll</span>(<span class="n">'.swiper-slide'</span>);</p>
+    <p><span class="p">const</span> modals <span class="p">=</span> <span class="b">document</span>.<span class="b">querySelectorAll</span>(<span class="n">'.modal'</span>);</p>
+    <p>listItems.forEach(<span class="p">function</span>(listItem) {</p>
+    <p>&nbsp;&nbsp;listItem.<span class="b">addEventListener</span>(<span class="n">"click"</span>, <span class="p">function</span>() {</p>
+    <p><span class="p">&nbsp;&nbsp;&nbsp;&nbsp;let</span> modalId <span class="p">=</span> listItem.getAttribute(<span class="n">"data-modal"</span>);</p>
+    <p>&nbsp;&nbsp;&nbsp;&nbsp;showSpecificModal(modalId);</p>
+    <p>&nbsp;&nbsp;});</p>
+    <p>});</p>
+    <br />
+    <p><span class="p">function</span> showSpecificModal(modalId) {</p>
+    <p>&nbsp;&nbsp;modals.forEach(<span class="p">function</span>(modal) {</p>
+    <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="p">if</span> (modal.id <span class="p">===</span> modalId) {</p>
+    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;modal.style.display = "<span class="n">block</span>";</p>
+    <p>&nbsp;&nbsp&nbsp;&nbsp;;} <span class="p">else</span> {</p>
+    <p>&nbsp;&nbsp;&nbsp;&nbsp;modal.style.display <span class="p">=</span> <span class="n">"none"</span>;</p>
+    <p>&nbsp;&nbsp;&nbsp;&nbsp;}</p>
+    <p>&nbsp;&nbsp;});</p>
+    <p>}</p>
+    <br />
+</div>
+
+<div id="code02_03">
+    <p><span class="h">//닫기 이벤트</span></p>
+    <p><span class="p">const</span> closeBtns <span class="p">=</span> <span class="b">document</span>.<span class="b">querySelectorAll</span>>(<span class="n">'.closeBtn'</span>);</p>
+    <p>closeBtns.forEach(<span class="p">function</span>(closeBtn) {</p>
+    <p>&nbsp;&nbsp;closeBtn.<span class="b">addEventListener</span>(<span class="n">"click"</span>, <span class="p">function</span>() {</p>
+    <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="p">let</span> modal = closeBtn.closest(<span class="n">'.modal'</span>);</p>
+    <p>&nbsp;&nbsp;&nbsp;&nbsp;modal.style.display <span class="p">=</span> <span class="n">"none"</span>;</p>
+    <p>&nbsp;&nbsp;});</p>
+    <p>});</p>
+    <br />
+    <p><span class="h">//배경 클릭시 닫기</span></p>
+    <p><span class="p">let</span> bgs <span class="p">=</span> <span class="b">document</span>.<span class="b">querySelectorAll</span>(<span class="n">'.bg'</span>);</p>
+    <p>bgs.forEach(<span class="p">function</span>(bg) {</p>
+    <p>&nbsp;&nbsp;bg.<span class="b">addEventListener</span>(<span class="n">"click"</span>, <span class="p">function</span>() {</p>
+    <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="p">let</span> modal <span class="p">=</span> bg.closest(<span class="n">'.modal'</span>);</p>
+    <p>&nbsp;&nbsp;&nbsp;&nbsp;modal.style.display = <span class="n">"none"</span>;</p>
+    <p>&nbsp;&nbsp;});</p>
+    <p>});</p>
+</div>
+
+<div id="code03_01">
+    <p><span class="p">import</span> shoppingList <span class="p">from</span> <span class="n">"./data.js"</span></p>
+    <p><span class="p">const</span> cologneProduct <span class="p"> = </span> <span class="b">document</span>.querySelector(<span class="n">'.cologne_product'</span>)</p>
+    <br />
+    <p><span class="p">for</span> (<span class="p">let</span> i<span class="p"> = </span>0; i < shoppingList.<span class="b">length</span>; i<span class="p">++</span> ) {</p>
+    <p>&nbsp;&nbsp;<span class="p">const</span> cologneDiv <span class="p">=</span> <span class="n">document.</span>createElement(<span class="n">'div'</span>)</p>
+    <p>&nbsp;&nbsp;imgBox.setAttribute(<span class="n">'class'</span>, <span class="n">'img_box'</span>)</p>
+    <p>&nbsp;&nbsp;cologneDiv.appendChild(imgBox)</p>
+    <br />
+    <p>&nbsp;&nbsp;<span class="p">const</span> cologneHref <span class="p">=</span> <span class="b">document</span>.createElement(<span class="n">'a'</span>)</p>
+    <p>&nbsp;&nbsp;cologneHref.setAttribute(<span class="n">'href'</span>, shoppingList[i].href)</p>
+    <p>&nbsp;&nbsp;imgBox.appendChild(cologneHref)</p>
+    <br />
+    <p>&nbsp;&nbsp;<span class="p">const</span> cologneImg <span class="p">=</span> <span class="b">document</span>.createElement(<span class="n">'img'</span>)</p>
+    <p>&nbsp;&nbsp;cologneImg.setAttribute(<span class="n">'src'</span>, shoppingList[i].src)</p>
+    <p>&nbsp;&nbsp;cologneHref.appendChild(cologneImg)</p>
+</div>
+
+<div id="code03_02">
+    <p>&nbsp;&nbsp;<span class="p">const</span> cologneHover <span class="p">=</span> <span class="b">document</span>.createElement(<span class="n">'div'</span>)</p>
+    <p>&nbsp;&nbsp;cologneHover.setAttribute(<span class="n">'class'</span>, <span class="n">'cologne_hover'</span>)</p>
+    <p>&nbsp;&nbsp;cologneHover.setAttribute(<span class="n">'data-modal'</span>, shoppingList[i].modalID)</p>
+    <p>&nbsp;&nbsp;cologneDiv.appendChild(cologneHover)</p>
+    <br />
+    <p>&nbsp;&nbsp;<span class="p">const</span> hoverName = <span class="b">document</span>.createElement(<span class="n">'p'</span>)</p>
+    <p>&nbsp;&nbsp;<span class="p">const</span> hoverNameText = <span class="b">document</span>.createTextNode(shoppingList[i].hover)</p>
+    <p>&nbsp;&nbsp;hoverName.appendChild(hoverNameText)</p>
+    <p>&nbsp;&nbsp;cologneHover.appendChild(hoverName)</p>
+    <br />
+    <p>&nbsp;&nbsp;<span class="p">const</span> cologneName1 <span class="p">=</span> <span class="b">document</span>.createElement(<span class="n">'p'</span>)</p>
+    <p>&nbsp;&nbsp;<span class="p">const</span> cologneNameText1 <span class="p">=</span> <span class="b">document</span>.createTextNode(shoppingList[i].name1)</p>
+    <p>&nbsp;&nbsp;cologneName1.appendChild(cologneNameText1)</p>
+    <p>&nbsp;&nbsp;cologneDiv.appendChild(cologneName1)</p>
+    <br />
+    <p>&nbsp;&nbsp;<span class="p">const</span> cologneName2 <span class="p">=</span> <span class="b">document</span>.createElement(<span class="n">'p'</span>)</p>
+    <p>&nbsp;&nbsp;<span class="p">const</span> cologneNameText2 <span class="p">=</span> <span class="b">document</span>.createTextNode(shoppingList[i].name2)</p>
+    <p>&nbsp;&nbsp;cologneName2.appendChild(cologneNameText2)</p>
+    <p>&nbsp;&nbsp;cologneName2.setAttribute(<span class="n">'class'</span>, <span class="n">'name'</span>)</p>
+    <p>&nbsp;&nbsp;cologneDiv.appendChild(cologneName2)</p>
+    <br />
+    <p>&nbsp;&nbsp;<span class="p">const</span> colognePrice <span class="p">=</span> <span class="b">document</span>.createElement(<span class="n">'p'</span>);</p>
+    <p>&nbsp;&nbsp;<span class="p">const</span> priceValue <span class="p">=</span> Number(shoppingList[i].price);</p>
+    <p>&nbsp;&nbsp;<span class="p">const</span> formattedPrice <span class="p">=</span> priceValue.toLocaleString('en-US');</p>
+    <br />
+    <p>&nbsp;&nbsp;<span class="p">const</span> colognePriceText <span class="p">=</span> <span class="b">document</span>.createTextNode(`₩${formattedPrice}`);</p>
+    <p>&nbsp;&nbsp;colognePrice.appendChild(colognePriceText);</p>
+    <p>&nbsp;&nbsp;cologneDiv.appendChild(colognePrice);</p>
+    <br />
+    <p>&nbsp;&nbsp;cologneProduct.appendChild(cologneDiv)</p>
+    <p>}</p>
+</div>
+
+<div id="code03_03">
+    <p><span class="h">//data.js</span></p>
+    <p><span class="p">const</span> shoppingList <span class="p">=</span> [</p>
+    <p>&nbsp;&nbsp;{</p>
+    <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="g">id</span>: "cologne12", </p>
+    <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="g">hover</span>: "미리보기",</p>
+    <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="g">modalID</span>: "cologne-modal12",</p>
+    <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="g">name1</span>: "Blackberry & Bay Cologne",</p>
+    <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="g">name2</span>: "블랙베리 앤 베이 코롱",</p>
+    <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="g">price</span>: "218000",</p>
+    <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="g">src</span>: "./img/sub_item01.png",</p>
+    <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="g">href</span>: "../detail_page/detail.html"</p>
+    <p>&nbsp;&nbsp;},</p>
+</div>
+
+<div id="code04_01">
+    <p><span class="p">const</span> sortBtn <span class="p">=</span> <span class="b">document</span>.querySelector(<span class="n">'.sort_area'</span>);</p>
+    <p><span class="p">const</span> sortBox <span class="p">=</span> <span class="b">document</span>.querySelector(<span class="n">'sort_box'</span>);</p>
+    <p>let state <span class="p">=</span> <span class="g">false</span>;</p>
+    <br />
+    <p>sortBtn.<span class="b">addEventListener</span>('mouseover', <span class="p">function</span> () {</p>
+    <p>&nbsp;&nbsp;sortBox.style.display <span class="p">=</span> <span class="n">'block'</span>;</p>
+    <p>&nbsp;&nbsp;state <span class="p">=</span> <span class="g">true</span>;</p>
+    <p>});</p>
+    <br />
+    <p>sortBox.<span class="b">addEventListener</span>('mouseleave', <span class="p">function</span> () {</p>
+    <p>&nbsp;&nbsp;sortBox.style.display <span class="p">=</span> <span class="n">'none'</span>;</p>
+    <p>&nbsp;&nbsp;state <span class="p">=</span> <span class="g">false</span>;</p>
+    <p>});</p>
+    <br />
+    <p><span class="p">const</span> sortByName <span class="p">=</span> <span class="b">document</span>.getElementById(<span class="n">'sortByName'</span>);</p>
+    <p><span class="p">const</span> sortByPrice <span class="p">=</span> <span class="b">document</span>.getElementById(<span class="n">'sortByPrice'</span>);</p>
+    <p><span class="p">const</span> resetSort <span class="p">=</span> <span class="b">document</span>.getElementById(<span class="n">'resetSort'</span>);</p>
+    <p><span class="p">const</span> originalOrder <span class="p">=</span> Array.<span class="p">from</span>(<span class="b">document</span>.<span class="b">querySelectorAll</span>(<span class="n">'cologne_box'</span>));</p>
+</div>
+
+<div id="code04_02">
+    <p>sortByName.<span class="b">addEventListener</span>(<span class="n">'click'</span>, <span class="p">function</span>() {</p>
+    <p>&nbsp;&nbsp;<span class="p">const</span> cologneProduct <span class="p">=</span> <span class="b">document</span>.querySelector(<span class="n">'.cologne_product'</span>);</p>
+    <p>&nbsp;&nbsp;<span class="p">const</span> cologneBoxes <span class="p">=</span> cologneProduct.<span class="b">querySelectorAll</span>(<span class="n">'.cologne_box'</span>);</p>
+    <p>&nbsp;&nbsp;<span class="p">const</span> sortedArray <span class="p">=</span> Array.from(cologneBoxes).sort((a, b) <span class="p">=></span> {</p>
+    <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="p">const</span> nameA <span class="p">=</span> a.querySelector(<span class="n">'.name'</span>).textContent;</p>
+    <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="p">const</span> nameB <span class="p">=</span> b.querySelector(<span class="n">'.name'</span>).textContent;</p>
+    <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="p">const</span> nameA.localeCompare(nameB);</p>
+    <p>&nbsp;&nbsp;&nbsp;&nbsp;});</p>
+    <p>&nbsp;&nbsp;sortedArray.forEach(<span class="p">function</span>(cologneBox) {</p>
+    <p>&nbsp;&nbsp;&nbsp;&nbsp;cologneProduct.appendChild(cologneBox);</p>
+    <p>&nbsp;&nbsp;});</p>
+    <p>});</p>
+    <br />
+    <p>sortByPrice.<span class="b">addEventListener</span>('click', <span class="p">function</span>() {</p>
+    <p>&nbsp;&nbsp;<span class="p">const</span> cologneProduct <span class="p">=</span> <span class="b">document</span>.querySelector(<span class="n">'.cologne_product'</span>);</p>
+    <p>&nbsp;&nbsp;<span class="p">const</span> cologneBoxes <span class="p">=</span> cologneProduct.<span class="b">querySelectorAll</span>(<span class="n">'.cologne_box'</span>);</p>
+    <p>&nbsp;&nbsp;<span class="p">const</span> sortedArray <span class="p">=</span> Array.<span class="p">from</span>(cologneBoxes).sort((a, b) => {</p>
+    <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="p">const</span> priceA = parseInt(a.querySelector(<span class="g">'p:nth-of-type(3)'</span>)<br/>.textContent.slice(1).replace(',', ''));</p>
+    <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="p">const</span> priceB = parseInt(b.querySelector(<span class="g">'p:nth-of-type(3)'</span>)<br/>.textContent.slice(1).replace(',', ''));</p>
+    <p>&nbsp;&nbsp;&nbsp;&nbsp;return priceA - priceB;</p>
+    <p>&nbsp;&nbsp;});</p>
+    <p>&nbsp;&nbsp;sortedArray.forEach(<span class="p">function</span>(cologneBox) {</p>
+    <p>&nbsp;&nbsp;cologneProduct.appendChild(cologneBox);</p>
+    <p>&nbsp;&nbsp;});</p>
+    <p>});</p>
+    <br />
+    <p>resetSort.<span class="b">addEventListener</span>(<span class="n">'click'</span>, <span class="p">function</span>() {</p>
+    <p>&nbsp;&nbsp;const cologneProduct <span class="p">=</span> document.querySelector(<span class="n">'.cologne_product'</span>);</p>
+    <p>&nbsp;&nbsp;originalOrder.forEach(<span class="p">function</span>(cologneBox) {</p>
+    <p>&nbsp;&nbsp;&nbsp;&nbsp;cologneProduct.appendChild(cologneBox);</p>
+    <p>&nbsp;&nbsp;});</p>
+    <p>});</p>
+    
+</div>
+
+
+
+<div id="code05_01">
+    <p><span class="p">const</span> photoInput <span class="p">=</span> <span class="b">document</span>.getElementById(<span class="n">'photo-input'</span>);</p>
+    <p><span class="p">const</span> descriptionInput <span class="p">=</span> <span class="b">document</span>.getElementById(<span class="n">'description-input'</span>);</p>
+    <p><span class="p">const</span> uploadButton <span class="p">=</span> <span class="b">document</span>.getElementById(<span class="n">'upload-button'</span>);</p>
+    <p><span class="p">const</span> gallery <span class="p">=</span> <span class="b">document</span>.getElementById(<span class="n">'gallery'</span>);</p>
+    <p><span class="p">let</span> reviewId = 1;</p>
+    <br />
+    <p>uploadButton.<span class="b">addEventListener</span>(<span class="n">'click'</span>, uploadPhoto);</p>
+    <br />
+    <p><span class="p">function</span> uploadPhoto() {</p>
+    <p>&nbsp;&nbsp;<span class="p">const</span> file <span class="p">=</span> photoInput.files[0];</p>
+    <p>&nbsp;&nbsp;if (file) {</p>
+    <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="p">const</span> reader <span class="p">=</span> new FileReader();</p>
+    <p>&nbsp;&nbsp;&nbsp;&nbsp;reader.onload <span class="p">=</span> <span class="p">function</span>(event) {</p>
+    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="p">const</span> imageUrl <span class="p">=</span> event.target.result;</p>
+    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="p">const</span> description <span class="p">=</span> descriptionInput.value;</p>
+    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="p">const</span> today <span class="p">=</span> getToday();</p>
+    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;displayPhoto(imageUrl, description, today);</p>
+    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;resetInputs();</p>
+    <p>&nbsp;&nbsp;&nbsp;&nbsp;};</p>
+    <p>&nbsp;&nbsp;&nbsp;&nbsp;reader.readAsDataURL(file); </p>
+    <p>&nbsp;&nbsp;}</p>
+    <p>}</p>
+</div>
+
+<div id="code05_02">
+    <p>function displayPhoto(imageUrl, description, today) {</p>
+    <p>&nbsp;&nbsp;<span class="p">const</span> photoItem <span class="p">=</span> <span class="b">document</span>.createElement(<span class="n">'div'</span>);</p>
+    <p>&nbsp;&nbsp;photoItem.classList.add(<span class="n">'photo-item'</span>);</p>
+    <br />
+    <p>&nbsp;&nbsp;<span class="p">const</span> image <span class="p">=</span> <span class="b">document</span>.createElement(<span class="n">'img'</span>); </p>
+    <p>&nbsp;&nbsp;image.src <span class="p">=</span> imageUrl;</p>
+    <p>&nbsp;&nbsp;photoItem.appendChild(image);</p>
+    <br />
+    <p>&nbsp;&nbsp;<span class="p">const</span> descriptionPara <span class="p">=</span> <span class="b">document</span>.createElement(<span class="n">'p'</span>);</p>
+    <p>&nbsp;&nbsp;descriptionPara.textContent <span class="p">=</span> description;</p>
+    <p>&nbsp;&nbsp;photoItem.appendChild(descriptionPara);</p>
+    <br />
+    <p>&nbsp;&nbsp;<span class="p">const</span> datePara <span class="p">=</span> <span class="b">document</span>.createElement(<span class="n">'p'</span>);</p>
+    <p>&nbsp;&nbsp;datePara.textContent <span class="p">=</span> today;</p>
+    <p>&nbsp;&nbsp;photoItem.appendChild(datePara);</p>
+    <br />
+    <p>&nbsp;&nbsp;<span class="p">const</span> deleteButton <span class="p">=</span> <span class="b">document</span>.createElement(<span class="n">'button'</span>);</p>
+    <p>&nbsp;&nbsp;deleteButton.setAttribute(<span class="n">'class'</span>, <span class="n">'delete'</span>)</p>
+    <p>&nbsp;&nbsp;deleteButton.textContent <span class="p">=</span> '삭제하기';</p>
+    <br />
+    <p>&nbsp;&nbsp;deleteButton.<span class="b">addEventListener</span>(<span class="n">'click'</span>, deletePhoto);</p>
+    <p>&nbsp;&nbsp;photoItem.appendChild(deleteButton);</p>
+    <p>&nbsp;&nbsp;gallery.appendChild(photoItem);</p>
+    <p>}</p>
+    <br />
+    <p>function deletePhoto(event) {</p>
+    <p>&nbsp;&nbsp;<span class="p">const</span> photoItem <span class="p">=</span> event.target.closest(<span class="n">'photo-item'</span>);</p>
+    <p>&nbsp;&nbsp;if (photoItem) {</p>
+    <p>&nbsp;&nbsp;&nbsp;&nbsp;photoItem.remove();</p>
+    <p>&nbsp;&nbsp;}</p>
+    <p>}</p>
+    <br />
+    <p><span class="p">function</span> resetInputs() {</p>
+    <p>&nbsp;&nbsp;photoInput.value <span class="p">=</span> ''; </p>
+    <p>&nbsp;&nbsp;descriptionInput.value <span class="p">=</span> '';</p>
+    <p>}</p>
+    <br />
+    <p><span class="p">function</span> getToday() {</p>
+    <p>&nbsp;&nbsp;<span class="p">const</span> today <span class="p">=</span> new Date();</p>
+    <p>&nbsp;&nbsp;<span class="p">const</span> year <span class="p">=</span> today.getFullYear();</p>
+    <p>&nbsp;&nbsp;<span class="p">const</span> month <span class="p">=</span> String(today.getMonth() + 1).padStart(2, '0');</p>
+    <p>&nbsp;&nbsp;<span class="p">const</span> date <span class="p">=</span> String(today.getDate()).padStart(2, '0');</p>
+    <p>&nbsp;&nbsp;<span class="g">return</span> `${year}-${month}-${date}`;</p>
+    <p>}</p>
+</div>

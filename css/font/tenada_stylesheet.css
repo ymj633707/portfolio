@@ -1,0 +1,13 @@
+@font-face {
+    font-family: 'Tenada';
+    src: url('Tenada.eot');
+    src: url('Tenada.eot?#iefix') format('embedded-opentype'),
+        url('Tenada.woff2') format('woff2'),
+        url('Tenada.woff') format('woff'),
+        url('Tenada.ttf') format('truetype'),
+        url('Tenada.svg#Tenada') format('svg');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
